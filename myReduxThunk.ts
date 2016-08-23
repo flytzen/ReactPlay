@@ -5,7 +5,7 @@
 import {Middleware, Dispatch} from "redux";
 
 function createThunkMiddleware() : Middleware {
-  return ({ dispatch, getState }) => (next : any) => (action : any) => {
+  return ({ dispatch , getState } : any) => (next : any) => (action : any) => {
     if (typeof action === 'function') {
       return action(dispatch, getState);
     }

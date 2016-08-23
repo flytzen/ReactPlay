@@ -5,7 +5,7 @@ import Header from "../components/header";
 import Clients from "../components/clients";
 import Sites from "../components/sites";
 import Properties from "../components/properties";
-import {fetchClients} from '../actions/clientActions.ts';
+import {fetchClients} from '../actions/clientActions';
 import { EntitySet } from '../rootStore';
 import Client from '../entities/client';
 import { RootState } from "../rootStore";

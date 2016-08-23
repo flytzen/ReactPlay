@@ -1,0 +1,1 @@
+See http://blog.tomduncalf.com/posts/setting-up-typescript-and-react/ for installing the correct version of typescript etc
