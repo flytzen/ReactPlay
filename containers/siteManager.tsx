@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Dispatch } from 'redux';
 import { Provider, connect } from 'react-redux';
 import Header from "../components/header";
-import Clients from "../components/clients";
+import ClientList from "../components/clientList";
 import Sites from "../components/sites";
 import Properties from "../components/properties";
 import {fetchClients} from '../actions/clientActions';
@@ -22,7 +22,7 @@ class SiteManager extends React.Component<SiteManagerProps, {}> {
         <div>
             <div className="left">
             // Do conditional rendering here on clients, i.e. isFetching...
-                <Clients clientList={this.props.clients.items}/>
+                <ClientList clientList={this.props.clients.items}/>
                 <Sites siteList = {[]}/>
             </div>
             <div className="payload">
