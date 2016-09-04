@@ -8,8 +8,10 @@ export interface SitesProps {
 export default class Sites extends React.Component<SitesProps, {}> {
     render() {
         return (
-            <div>
-                TBD
+            <div className="siteList">
+                <div className="sectionHeader">Sites</div>
+                <div className="card">Site 1</div>
+                <div className="card">Site 2</div>
             </div>
         );
     }

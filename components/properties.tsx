@@ -9,7 +9,10 @@ export default class Properties extends React.Component<PropertiesProps, {}> {
     render() {
         return (
             <div>
-                TBD
+                <div className="sectionHeader">Properties</div>
+                <div className="card">Property 1</div>
+                <div className="card">Property 2</div>
+                <div className="card">Property 3</div>
             </div>
         );
     }

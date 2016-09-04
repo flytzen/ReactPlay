@@ -5,6 +5,7 @@ import * as ReactDOM from 'react-dom';
 import SiteManager from './containers/siteManager';
 import { Provider } from 'react-redux';
 import store from './store';
+import './styles/main.scss'; 
 
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 

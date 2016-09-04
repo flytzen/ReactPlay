@@ -9,6 +9,7 @@ import {fetchClients} from '../actions/clientActions';
 import { EntitySet } from '../rootStore';
 import Client from '../entities/client';
 import { RootState } from "../rootStore";
+import './siteManager.scss';
 
 export interface SiteManagerProps {
     clients : EntitySet<Client>,
@@ -19,13 +20,12 @@ class SiteManager extends React.Component<SiteManagerProps, {}> {
     
   render() {
     return (
-        <div>
-            <div className="left">
-            // Do conditional rendering here on clients, i.e. isFetching...
+        <div className="siteManagerContainer">
+            <div className="siteManagerLeft">
                 <ClientList clientList={this.props.clients.items}/>
                 <Sites siteList = {[]}/>
             </div>
-            <div className="payload">
+            <div className="siteManagerRight">
                 <Properties propertyList = {[]}/>
             </div>
         </div>

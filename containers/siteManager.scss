@@ -1,0 +1,31 @@
+.siteManagerContainer {
+    display: flex;
+    @media (max-width:768px) {
+        flex-direction: column;
+    }
+}
+
+.siteManagerLeft {
+    display: flex;
+    flex-direction: column;
+    border: solid white 1px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    .clientList {
+        flex-grow: 1;
+        border: solid sandybrown 1px;
+        padding: 1px;
+    }
+    .siteList {
+        flex-grow: 2;
+        border: solid green 1px;
+        padding: 1px;
+    }
+}
+.siteManagerRight {
+    flex-grow: 4;
+    flex-basis: 80%;
+    border: solid purple 1px;
+    padding: 1px;
+
+}

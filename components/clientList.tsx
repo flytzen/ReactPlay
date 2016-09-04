@@ -12,7 +12,8 @@ class ClientList extends React.Component<ClientListProps, {}> {
     render() {
         const   clientList  = this.props.clientList;
         return (
-            <div>
+            <div className='clientList'>
+                <div className="sectionHeader">Clients</div>
                 {clientList.map(client => 
                     <ClientDetail key={client.id} client={client} />
                     )}
