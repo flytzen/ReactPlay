@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/react-bootstrap": "0.0.32",
+    "extract-text-webpack-plugin": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.2.1",
     "react-bootstrap": "^0.30.3",

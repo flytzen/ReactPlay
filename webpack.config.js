@@ -1,7 +1,8 @@
 // TODO: create a css file in production: http://jamesknelson.com/writing-happy-stylesheets-with-webpack/
 var path = require('path');
 var webpack = require('webpack');
- 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   entry: './app.tsx',
   output: { path: __dirname, filename: 'bundle.js' },
@@ -20,12 +21,15 @@ module.exports = {
       },
       { test: /\.tsx?$/, loader: "ts-loader" },
        // Load SCSS
-      { test: /\.scss$/, loader: "style!css!sass" },
-      { test: /\.css$/, loader: "style!css" },
+      { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader") },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")  },
     ]
   },
   externals: {
         "react": "React",
         "react-dom": "ReactDOM"
     },
+  plugins: [
+    new ExtractTextPlugin("style.css", {allChunks: false})
+  ]
 };
