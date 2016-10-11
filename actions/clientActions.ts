@@ -1,5 +1,5 @@
 import * as fetch from "isomorphic-fetch";
-import { rootApiUrl } from "../constants.ts";
+import { rootApiUrl } from "../constants";
 import Client from "../entities/client";
 import { Dispatch } from "redux";
 import { ThunkAction } from './myThunkAction';
@@ -11,14 +11,14 @@ export const RECEIVE_CLIENTS = "RECEIVE_CLIENTS";
 
 
 
-export function requestClients() : Action<{}> {
+function requestClients() : Action<{}> {
     return {
         type: REQUEST_CLIENTS,
         payload: null
     };
 }
 
-export function receiveClients(clientList : Client[]) : Action<Client[]> {
+function receiveClients(clientList : Client[]) : Action<Client[]> {
     return {
         type: RECEIVE_CLIENTS,
         payload: clientList
@@ -39,4 +39,12 @@ export function fetchClients() : ThunkAction<void> {
         })
         .then(data => dispatch(receiveClients(data)));
     }
+}
+
+export function addClient(client : Client) : ThunkAction<void> {
+    // add the client to local state by dispatching it
+    // send it to the server
+    // update local state to remove the "saving" flag on the client
+    // how do I handle the lack of id and then having an id... 
+    // Actually I could remove the old version and replace with the one from the server...
 }

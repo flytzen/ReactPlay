@@ -3,12 +3,12 @@ import { Entities, EntitySet } from "../rootStore";
 import Client from "../entities/client";
 import { Action } from "../actions/myAction"
 
-import {REQUEST_CLIENTS, RECEIVE_CLIENTS} from '../actions/clientActions.ts';
+import {REQUEST_CLIENTS, RECEIVE_CLIENTS} from '../actions/clientActions';
 
 function clientReducer (state : EntitySet<Client> = {
     isFetching: false,
     items: []
-}, action : Action<Client[]>) {  // TODO: Get rid of "any" here
+}, action : Action<Client[]>) {  
     switch (action.type) {
         case REQUEST_CLIENTS:
             return Object.assign({}, state, { isFetching: true});
